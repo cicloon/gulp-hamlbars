@@ -1,0 +1,65 @@
+{
+  "name": "gulp-hamlbars",
+  "description": "Compile hamlbars to handlebars.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cicloon/gulp-hamlbars",
+  "author": {
+    "name": "Cicloon",
+    "email": "aleon.prof@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cicloon/gulp-hamlbars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cicloon/gulp-hamlbars/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/cicloon/gulp-hamlbars/blob/master/LICENSE-MIT"
+    }
+  ],
+
+  "engines": {
+    "node": ">= 5.0.0"
+  },
+  "scripts": {
+
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sourcemaps": "^1.2.7",
+    "mocha": "*",
+    "vinyl-file": "^1.2.1",
+    "xo": "*"
+  },
+  "dependencies": {
+    "convert-source-map": "^1.0.0",
+    "cross-spawn-async": "^2.0.0",
+    "dargs": "^2.0.3",
+    "each-async": "^1.0.0",
+    "escape-string-regexp": "^1.0.3",
+    "glob": "^5.0.5",
+    "glob2base": "0.0.12",
+    "gulp-util": "^3.0.4",
+    "md5-hex": "^1.0.2",
+    "object-assign": "^4.0.1",
+    "os-tmpdir": "^1.0.0",
+    "path-exists": "^2.0.0",
+    "rimraf": "^2.2.8",
+    "vinyl-fs": "^1.0.0"
+  },
+  "engines": {
+    "node": ">= 5.0.0"
+  },
+  "files": [
+    "index.js",
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "hamlbars"
+  ]
+}
