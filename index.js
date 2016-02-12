@@ -47,12 +47,10 @@ var hamlbarize = (fileContent) => {
     })
 
     socket.on('connect', () => {
-      gutil.log("connected")
       socket.write(fileContent + sep)
     })
 
     socket.on('data', (data) => {
-      gutil.log('compiled file received');
       outputFile = data
     })
 
@@ -63,7 +61,7 @@ var hamlbarize = (fileContent) => {
     socket.on("close", (data, something) => {
       resolve(outputFile)
     })
-
+n
     setTimeout( () => { socket.connect(4568)}, globalHamlbarizeTimeout)
     globalHamlbarizeTimeout += 20
 
@@ -95,9 +93,6 @@ var gulpHamlbars = function(sources, cb){
 		bases.push(utils.calculateBase(source));
 	});
 
-  // gutil.log(sources)
-  // gutil.log(matches)
-  // gutil.log(bases)
 
   // log and return stream if there are no file matches
 	if (matches[0].length < 1) {
@@ -107,8 +102,6 @@ var gulpHamlbars = function(sources, cb){
 	}
 
   var promises = []
-
-  gutil.log("processing...")
 
   matches.forEach( function(match, i){
     var base = bases[i];
@@ -122,7 +115,7 @@ var gulpHamlbars = function(sources, cb){
           var vinylFile = new gutil.File({
             cwd: process.cwd(),
             base: base,
-            path: filePath.replace(".hamlbars", ".handlebars"),
+            path: filePath.replace(".hamlbars", ".hbs"),
             contents: new Buffer(handlebarsOutput, "utf-8")
           });
 
